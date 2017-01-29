@@ -1,0 +1,137 @@
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+
+    background-color: HSL(0, 3%, 14%);
+    color: HSL(0, 3%, 86%);
+
+    font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+
+    margin:0px;
+    padding:0px;
+}
+.statusbar {
+    flex: 0 0 auto;
+    display: none;
+}
+.app {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2 {
+    display: block;
+    text-align: center;
+    flex: 0 0 auto;
+    margin: 0;
+}
+
+h1 {
+    background-color: HSL(19, 73%, 55%);
+    font-weight: normal;
+    font-size: 2rem;
+    padding: 0.5rem;
+    color: HSL(0, 3%, 14%);
+}
+
+h2 {
+    background-color: HSL(19, 73%, 35%);
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.5rem;
+    color: HSL(0, 3%, 86%);
+}
+
+main {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 0.5rem;
+    flex: 1 1 auto;
+}
+
+main p {
+    max-width: 60rem;
+    margin: 1rem auto;
+}
+
+table {
+    margin: 0 auto;
+    font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+}
+
+table th, table td {
+    padding: 0.25rem;
+}
+
+table thead {
+    background-color: HSL(19, 73%, 55%);
+    color: HSL(0, 3%, 14%);
+    padding: 0.5rem;
+}
+
+table tbody {
+    padding: 0.5rem;
+}
+
+table tbody tr th {
+    text-align: right;
+}
+
+table tbody tr td:nth-child(2),
+table tbody tr td:nth-child(2) {
+    text-align: center;
+}
+
+code, tbody tr td:nth-child(2) {
+    font-family: "Source Code Pro", "Menlo", "Courier New", Courier, monospace;
+}
+
+
+body.ios {
+    color: HSL(0, 3%, 14%);
+    background-color: HSL(0, 3%, 86%);
+}
+body.ios, body.ios table {
+    font-family: -apple-system, "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+}
+body.ios code, body.ios tbody tr td:nth-child(2) {
+    font-family: "Menlo", "Courier New", Courier, monospace;
+}
+body.ios .statusbar {
+    display: block;
+    background-color: HSL(19, 73%, 55%);
+    height: 22px;
+}
+
+body.android, body.android table {
+    font-family: sans-serif;
+}
+body.android code, body.android tbody tr td:nth-child(2) {
+    font-family: monospace;
+}
+
+body.browser, body.browser table {
+    font-family: "Helvetica Neue", "HelveticaNeue, Helvetica, Arial, sans-serif;
+}
+
+body.windows, body.windows table {
+    font-family: "Segoe UI", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+}
+body.windows code, body.windows tbody tr td:nth-child(2) {
+    font-family: "Consolas", "Courier New", Courier, monospace;
+}
